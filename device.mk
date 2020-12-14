@@ -31,10 +31,10 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    Camera2
+    GCam
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/org.codeaurora.snapcam.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/org.codeaurora.snapcam.xml
+    $(LOCAL_PATH)/configs/com.google.android.apps.cameralite.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.google.android.apps.cameralite.xml
 
 # Common init scripts
 PRODUCT_PACKAGES += \
@@ -44,11 +44,9 @@ PRODUCT_PACKAGES += \
 
 # Device-specific settings
 PRODUCT_PACKAGES += \
-    LenovoParts
-
-# ZUIWalls
-PRODUCT_PACKAGES += \
-    ZUIWalls
+    LenovoParts \
+    libhidltransport \
+    libhwbinder
 
 # Dex preopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
@@ -68,13 +66,13 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.fingerprint.xml
 
 # FM
-#PRODUCT_PACKAGES += \
-#    FM2 \
-#    libqcomfm_jni \
-#    qcom.fmradio
+PRODUCT_PACKAGES += \
+    FM2 \
+    libqcomfm_jni \
+    qcom.fmradio
 
-#PRODUCT_BOOT_JARS += \
-#    qcom.fmradio
+PRODUCT_BOOT_JARS += \
+    qcom.fmradio
 
 # HIDL
 PRODUCT_PACKAGES += \
@@ -159,10 +157,6 @@ PRODUCT_BOOT_JARS += \
 # Wallpapers
 PRODUCT_PACKAGES += \
     PixelLiveWallpaperPrebuilt
-
-# Recorder
-PRODUCT_PACKAGES += \
-    KimciRecorder
 
 # Overlay
 PRODUCT_PACKAGES += \

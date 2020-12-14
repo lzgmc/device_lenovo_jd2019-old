@@ -1,6 +1,6 @@
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
-   ro.sf.lcd_density=480
+   ro.sf.lcd_density=440
 
 # FM
 PRODUCT_PRODUCT_PROPERTIES += \
