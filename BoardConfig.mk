@@ -120,7 +120,7 @@ BOARD_AVB_ENABLE := true
 HAS_BROKEN_PRIVAPP := true
 
 # OTA Assert
-TARGET_OTA_ASSERT_DEVICE := kunlun2,jd2019
+# TARGET_OTA_ASSERT_DEVICE := kunlun2,jd2019
 
 ifeq ($(BOARD_AVB_ENABLE), true)
    BOARD_AVB_RECOVERY_KEY_PATH := external/avb/test/data/testkey_rsa4096.pem
